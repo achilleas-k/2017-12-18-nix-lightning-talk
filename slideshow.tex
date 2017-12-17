@@ -7,6 +7,9 @@
 
 \graphicspath{{./figures/}}
 
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+
 \begin{document}
 
 \maketitle
@@ -61,15 +64,11 @@
 \end{frame}
 
 \begin{frame}[fragile]{NIX}{Python code}
-    \begin{minted}{python}
-    import foo
+    \inputminted[fontsize=\footnotesize]{python}{./code/nixify-data.py}
+\end{frame}
 
-    foo.bar(f=True)
-    if __name__ == "__main__":
-        print("everything")
-
-    \end{minted}
-
+\begin{frame}[fragile]{NIX}{HDF5 structure}
+    \inputminted[fontsize=\footnotesize]{shell}{./code/h5ls.out}
 \end{frame}
 
 \end{document}
