@@ -1,0 +1,75 @@
+\documentclass[10pt]{beamer}
+\usepackage{anyfontsize}
+\usepackage{minted}
+\title[NIX]{NIX\\An HDF5-based data file format}
+\author{Achilleas Koutsou}
+\date{December 17, 2017}
+
+\graphicspath{{./figures/}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{NIX}{Features}
+    Main features
+
+    \begin{itemize}
+        \item Open data format.
+        \item Store data, analysis results, and metadata conveniently in the same file.
+        \item Descriptive associations between data, analysis results and metadata.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{NIX}{Object hierarchy schema}
+    \begin{figure}
+        \includegraphics[width=\textwidth]{nix-model.pdf}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{NIX}{Libraries}
+    Libraries available for multiple languages
+
+    \begin{itemize}
+        \item[C++] core library and reference implementation.
+        \item[Python] bindings for core lib as well as complete reimplementation.
+        \item[Matlab] bindings for core lib.
+        \item[Java] bindings for core lib.
+    \end{itemize}
+    \begin{itemize}
+        \item[Neo IO] allows interoperability with Neo, an API for organising electrophysiological data.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{NIX}{Tooling}
+    NixView --- Cross-platform GUI viewer
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{nixview.pdf}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Convenient exploration of data and metadata.
+                \item Exports data to CSV.\
+                \item Plotting of data.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{NIX}{Python code}
+    \begin{minted}{python}
+    import foo
+
+    foo.bar(f=True)
+    if __name__ == "__main__":
+        print("everything")
+
+    \end{minted}
+
+\end{frame}
+
+\end{document}
