@@ -1,26 +1,83 @@
 \documentclass[10pt]{beamer}
 \usepackage{anyfontsize}
 \usepackage{minted}
+\usepackage[T1]{fontenc}
+% \usepackage{inconsolata}
+
 \title[NIX]{NIX\\An HDF5-based data file format}
 \author{Achilleas Koutsou}
-\date{December 17, 2017}
+\date{December 18, 2017}
 
 \graphicspath{{./figures/}}
-
-\usepackage[T1]{fontenc}
-\usepackage{inconsolata}
 
 \begin{document}
 
 \maketitle
 
+\begin{frame}{G-Node}
+
+    \begin{figure}
+        \includegraphics[width=0.4\textwidth]{g-node-logo.eps}
+    \end{figure}
+
+    \begin{itemize}
+        \item Development and free distribution of tools for handling and neurophysiological data.
+        \item All tools developed within the G-Node are open source and freely available.
+        \item Main projects:
+            \begin{itemize}
+                \item {\color{red}NIX}:\ Manage data and metadata together in an open, versatile format.
+                \item odML:\ Collect and manage all information about your experiment.
+                \item GIN:\ Secure data storage, easy collaboration and publication.
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Data, results, and metadata}
+
+    Data:
+    \begin{itemize}
+        \item Voltage traces, EEG recordings
+        \item Subject location across time
+        \item Subject preference to selection task
+    \end{itemize}
+
+    Analysis results:
+    \begin{itemize}
+        \item Spike times
+        \item Total time the subject spent in an area
+        \item Frequency of correct response over time
+    \end{itemize}
+
+    \pause{}
+
+    Metadata:
+    \begin{itemize}
+        \item Recording equipment
+        \item Subject age, gender, physical attributes
+        \item Date, time, experimenter
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Problems}
+    
+    The problem with (not necessarily) old datasets:
+    \begin{itemize}
+        \item Where did this dataset come from?
+        \item When was it created?
+        \item What were the simulation parameters when I generated these numbers?
+        \item Who ran the experiment?
+        \item What's the meaning of the second row of numbers?
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{NIX}{Features}
     Main features
 
     \begin{itemize}
-        \item Open data format.
-        \item Store data, analysis results, and metadata conveniently in the same file.
-        \item Descriptive associations between data, analysis results and metadata.
+        \item Open data format
+        \item Store data, analysis results, and metadata conveniently in the same file
+        \item Descriptive associations between data, analysis results and metadata
     \end{itemize}
 \end{frame}
 
