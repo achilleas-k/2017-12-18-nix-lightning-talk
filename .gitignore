@@ -8,12 +8,13 @@
 *.log
 *.nav
 *.out
-*.pdf
 *.snm
 *.toc
 *.vrb
 *.synctex.gz
 *.dvi
+
+*converted-to.pdf
 
 # minted stuff
 _minted-slideshow
