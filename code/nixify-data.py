@@ -14,4 +14,17 @@ time = darray.append_sampled_dimension(0.1)
 time.unit = "ms"
 darray.append_set_dimension()
 
+# identify regions of interest with start position and length
+regionsstart = np.array([13, 45, 63])
+regionslength = np.array([2, 2, 2])
+
+roipos = block.create_data_array("roi-positions", "positions",
+                                 data=regionsstart)
+roiext = block.create_data_array("roi-extents", "extents",
+                                 data=regionslength)
+mtag = block.create_multi_tag("roi", "regions of interest", roipos)
+mtag.extents = roiext
+mtag.units = "ms"
+mtag.references.append(darray)
+
 nixfile.close()
