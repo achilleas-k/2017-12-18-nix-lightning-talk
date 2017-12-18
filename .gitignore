@@ -12,6 +12,8 @@
 *.snm
 *.toc
 *.vrb
+*.synctex.gz
+*.dvi
 
 # minted stuff
 _minted-slideshow
